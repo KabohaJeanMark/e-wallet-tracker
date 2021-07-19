@@ -18,7 +18,6 @@ RSpec.describe Group, type: :model do
       group3 = Group.create(name: '', user_id: user1.id)
       expect(group3.errors.full_messages).to include("Name can't be blank")
     end
-
   end
 
   context 'association test' do

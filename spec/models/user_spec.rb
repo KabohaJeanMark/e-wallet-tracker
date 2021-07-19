@@ -11,12 +11,21 @@ RSpec.describe User, type: :model do
       expect(user2).to eq(false)
     end
     it 'requires a valid email' do
-      user4 = User.create(name: 'morpheus', password: '12fgt1234', email: 'morph')
-      expect(user4.errors.full_messages).to include("Email is invalid")
+      user3 = User.create(name: 'morpheus', password: '12fgt1234', email: 'morph')
+      expect(user3.errors.full_messages).to include('Email is invalid')
     end
     it 'cannot accept a blank password' do
-      user3 = User.create(name: 'morpheus', password: '', email: 'morph@email.com')
-      expect(user3.errors.full_messages).to include("Password can't be blank")
+      user4 = User.create(name: 'morpheus', password: '', email: 'morph@email.com')
+      expect(user4.errors.full_messages).to include("Password can't be blank")
+    end
+    it 'should have an email' do
+      user5 = User.create(name: 'morpheus', password: '12fgt1234', email: '')
+      expect(user5.errors.full_messages).to include("Email can't be blank")
+    end
+    it 'should have a unique email' do
+      User.create(name: 'jean', password: '123456', email: 'jean@example.com')
+      user6 = User.create(name: 'marco', password: 'mar456', email: 'jean@example.com')
+      expect(user6.errors.full_messages).to include('Email has already been taken')
     end
   end
 
