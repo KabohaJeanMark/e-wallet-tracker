@@ -1,0 +1,9 @@
+<h2>Group Transactions</h2>
+<ul>
+  <% @group.entities.each do |transaction| %>
+    <li>
+      <%= transaction.name %>
+      <%= transaction.amount %>
+      <%= transaction.created_at.to_date %>
+    </li>
+  <% end %>
