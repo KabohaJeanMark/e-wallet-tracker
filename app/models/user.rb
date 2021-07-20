@@ -11,5 +11,6 @@ class User < ApplicationRecord
                     length: { maximum: 255 }, format: { with: VALID_EMAIL_REGEX }
 
   has_many :groups
+  has_one_attached :image
   has_many :entities, foreign_key: 'author_id'
 end
