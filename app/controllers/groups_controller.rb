@@ -17,9 +17,9 @@ class GroupsController < ApplicationController
     @group = current_user.groups.build(group_params)
 
     if @group.save
-      redirect_to groups_path
+      redirect_to groups_path, notice: 'Group was successfully created.'
     else
-      render :new
+      render :new, alert: 'Group failed to create'
     end
   end
 

@@ -1,0 +1,8 @@
+<li>
+      <% if !entity.group.nil? && entity.group.icon.attached? %>
+        <%= image_tag entity.group.icon%>
+      <% end%>
+      <%= entity.name %>
+      <span> $<%= entity.amount%></span>
+      <%= entity.created_at.to_date %>
+</li>

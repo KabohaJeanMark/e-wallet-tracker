@@ -17,9 +17,15 @@
     <% end %>
   </div>
 
-   <%= form.select(:group_id, @group_options, :selected => 'none') %>
 
+  <%= form.label :group_id %>
+    <select>
+      <option value = "<%= nil%>"> none </option>
+      <% Group.all.each do |g| %>
+        <option value = "<%= g.id %>"><%= g.name %></option>
+      <% end %>
+    </select>
   <div>
-    <%= form.submit %>
+    <%= form.submit 'Create Transaction' %>
   </div>
 <% end %>
