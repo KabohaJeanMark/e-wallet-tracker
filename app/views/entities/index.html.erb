@@ -1,0 +1,13 @@
+<h2>All transactions</h2>
+<ul>
+  <% @entities.each do |transaction| %>
+    <li>
+      <%= image_tag transaction.group.icon if transaction.group.icon.attached? %>
+      <%= transaction.name %>
+      <%= transaction.amount%>
+      <%= transaction.created_at.to_date %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "Create New Transaction", new_entity_path %>

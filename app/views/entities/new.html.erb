@@ -1,0 +1,25 @@
+<h1>New Transaction</h1>
+
+<%= form_with model: @entity do |form| %>
+  <div>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+    <% @entity.errors.full_messages_for(:name).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :amount %><br>
+    <%= form.number_field :amount %>
+    <% @entity.errors.full_messages_for(:amount).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+   <%= form.select(:group_id, @group_options) %>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

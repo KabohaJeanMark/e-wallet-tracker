@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   root "users#show"
 
   resources :groups
+  resources :entities
   resources :users, only: [:show]
 end
