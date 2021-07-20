@@ -11,8 +11,29 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <header>
+      <nav>
+        <% if current_user %>
+          <span> Hi
+            <%= current_user.name %>
+          </span>
+            <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+          <% else %>
+            <%= link_to 'Sign in', user_session_path %>
+          <% end %>
+      </nav>
+      <% if notice.present? %>
+        <div class="notice">
+          <p> <%= notice %> </p>
+        </div>
+      <% end %>
+      <% if alert.present? %>
+        <div class="alert">
+          <p> <%= alert %> </p>
+        </div>
+      <% end %>
+        </nav>
+    </header>
     <%= yield %>
   </body>
 </html>
