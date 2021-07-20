@@ -1,6 +1,6 @@
-<h2>All transactions</h2>
+<h2>My transactions</h2>
 <ul>
-  <% @entities.each do |transaction| %>
+  <% @my_entities.each do |transaction| %>
     <li>
       <%= image_tag transaction.group.icon if transaction.group.icon.attached? %>
       <%= transaction.name %>

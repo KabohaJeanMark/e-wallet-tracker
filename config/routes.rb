@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root "users#show"
 
+  get 'my_transactions', to: 'entities#my_entities'
+
   resources :groups
   resources :entities
   resources :users, only: [:show]

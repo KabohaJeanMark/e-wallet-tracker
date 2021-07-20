@@ -1,7 +1,5 @@
 class EntitiesController < ApplicationController
-  def index
-    @entities = Entity.all
-  end
+  before_action :authenticate_user!
 
   def show
     @entity.find(params[:id])
@@ -21,9 +19,9 @@ class EntitiesController < ApplicationController
     end
   end
 
-  # def my_entities
-  #   @my_entities = current_user.entities
-  # end
+  def my_entities
+    @my_entities = current_user.entities
+  end
 
   private
 
