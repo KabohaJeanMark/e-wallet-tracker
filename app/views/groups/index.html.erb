@@ -2,6 +2,7 @@
 <ul>
   <% @groups.each do |group| %>
     <li>
+      <%= image_tag group.icon if group.icon.attached? %>
       <%= link_to group.name, group %>
       <%= group.created_at.to_date %>
     </li>
