@@ -15,7 +15,7 @@
       <nav>
         <% if current_user %>
           <span> Hi
-            <%= current_user.name %>
+            <%= link_to current_user.name, current_user%>
           </span>
             <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
           <% else %>

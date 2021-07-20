@@ -1,0 +1,9 @@
+<div>
+  <%= image_tag @user.image if @user.image.attached? %>
+</div>
+
+<h2>
+  <%= @user.name.capitalize %>
+</h2>
+
+<%= link_to "All Groups", groups_path %>

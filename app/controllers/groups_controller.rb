@@ -17,7 +17,7 @@ class GroupsController < ApplicationController
     @group = current_user.groups.build(group_params)
 
     if @group.save
-      redirect_to root_url
+      redirect_to groups_path
     else
       render :new
     end
