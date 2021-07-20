@@ -1,0 +1,12 @@
+<h2>My external transactions</h2>
+<ul>
+  <% @my_ext_entities.each do |transaction| %>
+    <li>
+      <%= transaction.name %>
+      <%= transaction.amount%>
+      <%= transaction.created_at.to_date %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "Create New Transaction", new_entity_path %>

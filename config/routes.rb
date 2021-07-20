@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   get 'my_transactions', to: 'entities#my_entities'
 
+  get 'my_ext_transactions', to: 'entities#my_external_entities'
+
   resources :groups
   resources :entities
   resources :users, only: [:show]

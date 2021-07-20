@@ -6,7 +6,8 @@ class EntitiesController < ApplicationController
   end
 
   def new
-    @group_options = Group.all.map { |g| [g.name, g.id] }
+    @group_options = [['none', nil]]
+    @group_options += Group.all.map { |g| [g.name, g.id] }
     @entity = Entity.new
   end
 
@@ -20,7 +21,11 @@ class EntitiesController < ApplicationController
   end
 
   def my_entities
-    @my_entities = current_user.entities
+    @my_entities = current_user.entities.where.not(group_id: nil)
+  end
+
+  def my_external_entities
+    @my_ext_entities = current_user.entities.where(group_id: nil)
   end
 
   private
