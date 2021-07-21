@@ -4,12 +4,6 @@
 $primary-color: #3778c2;
 $secondary-color: #5fb523;
 
-.all-groups {
-  h2 {
-    margin: 0;
-  }
-}
-
 .group-box {
   background-color: rgb(239, 243, 240);
 }
@@ -58,4 +52,10 @@ $secondary-color: #5fb523;
     border: 1px solid #fff;
     padding: 1.5rem 6rem;
   }
+}
+
+.form-name,
+.form-image {
+  margin: 1rem 0;
+  padding: 1rem 0;
 }
