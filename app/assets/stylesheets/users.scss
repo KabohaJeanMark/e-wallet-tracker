@@ -26,6 +26,10 @@ $white-color: #fff;
 
   .profile-image {
     margin: 3rem 0;
+
+    img {
+      border-radius: 50%;
+    }
   }
 
   nav {

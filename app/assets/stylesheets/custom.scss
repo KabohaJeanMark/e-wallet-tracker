@@ -15,7 +15,6 @@ $white-color: #fff;
 }
 
 img {
-  border-radius: 50%;
   max-width: 100%;
   height: auto;
   display: block;
@@ -25,6 +24,7 @@ img {
   color: $white-color;
   background-color: $primary-color;
   text-align: center;
+  padding: 2rem 0;
 }
 
 .user-sign-up {

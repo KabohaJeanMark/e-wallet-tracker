@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>EWalletTracker</title>
+    <title>E-Wallet Tracker</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -12,31 +12,6 @@
 
   <body>
     <div class="container-fluid">
-    <!-- <header>
-    <div class="container">
-      <nav>
-        <% if current_user %>
-          <span> Hi
-            <%= link_to current_user.name, current_user%>
-          </span>
-            <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
-          <% else %>
-            <%= link_to 'Sign in', user_session_path %>
-          <% end %>
-      </nav>
-      <% if notice.present? %>
-        <div class="notice">
-          <p> <%= notice %> </p>
-        </div>
-      <% end %>
-      <% if alert.present? %>
-        <div class="alert">
-          <p> <%= alert %> </p>
-        </div>
-      <% end %>
-    </nav>
-    </div>
-    </header> -->
       <%= yield %>
     </div>
   </body>

@@ -1,13 +1,18 @@
-<h2>All groups</h2>
-<ul>
-  <% @groups.each do |group| %>
-    <li>
-      <%= image_tag group.icon if group.icon.attached? %>
-      <%= link_to group.name, group %>
-      <%= group.created_at.to_date %>
-    </li>
-  <% end %>
-</ul>
+<section class="all-groups">
+  <div class="page-headerr">
+    <h2>ALL GROUPS</h2>
+  </div>
+    <div class="group-box">
+    <% @groups.each do |group| %>
+      <div class="group-item">
+        <%= image_tag group.icon if group.icon.attached? %>
+        <%= link_to group.name, group %>
+        <p><%= group.created_at.to_date %></p>
+      </div>
+    <% end %>
+    </div>
 
-<%= link_to "Create New Group", new_group_path %>
+  <div class="bottom-btn">
+  <%= link_to "CREATE NEW GROUP", new_group_path %>
+  </div>
 

@@ -4,4 +4,7 @@ class Group < ApplicationRecord
   belongs_to :user
   has_many :entities
   has_one_attached :icon
+
+  validates :icon, content_type: { in: %w[image/jpeg image/gif image/png],
+                                   message: 'must be a valid image format' }
 end

@@ -11,6 +11,8 @@ gem 'pg', '~> 1.1'
 gem 'puma', '~> 5.0'
 # Use bootstrap sass
 gem 'bootstrap-sass', '3.4.1'
+# Add a gem to help validate the image
+gem 'active_storage_validations', '0.8.9'
 # Use devise for authentication
 gem 'devise'
 # Use SCSS for stylesheets
