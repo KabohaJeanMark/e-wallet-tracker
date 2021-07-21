@@ -31,15 +31,16 @@ $white-color: #fff;
   nav {
     ul {
       list-style-type: none;
+
       li {
         border-bottom: 0.2rem solid $white-color;
+
         a {
           display: inline-block;
           color: $white-color;
           margin: 1rem 0;
           padding: 1rem 0;
           font-size: 2.2rem;
-          
         }
       }
     }
