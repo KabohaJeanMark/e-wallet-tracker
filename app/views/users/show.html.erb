@@ -1,21 +1,30 @@
-<div>
-  <%= image_tag @user.image if @user.image.attached? %>
-</div>
+<section class="user-profile">
+  
+    <% if @user.image.attached?%>
+      <div class="profile-image">
+        <%= image_tag @user.image%>
+      </div>
+    <% end %>
 
-<h2>
-  <%= @user.name.capitalize %>
-</h2>
+  <h2>
+    <%= @user.name.capitalize %>
+  </h2>
 
-<nav>
-  <ul>
-    <li>
-      <%= link_to "All Groups", groups_path %>
-    </li>
-    <li>
-      <%= link_to "My Transactions", my_transactions_path(group: true)%>
-    </li>
-    <li>
-      <%= link_to "My External Transactions", my_transactions_path(group: false)%>
-    </li>
-  <ul>
-</nav>
+  <nav class="nav">
+    <ul>
+      <li>
+        <%= link_to "All Groups", groups_path %>
+      </li>
+      <li>
+        <%= link_to "My Transactions", my_transactions_path(group: true)%>
+      </li>
+      <li>
+        <%= link_to "My External Transactions", my_transactions_path(group: false)%>
+      </li>
+      <li>
+        <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+      </li>
+    <ul>
+  </nav>
+
+<section>
