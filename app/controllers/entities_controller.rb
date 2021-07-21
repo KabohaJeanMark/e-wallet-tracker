@@ -21,13 +21,19 @@ class EntitiesController < ApplicationController
   end
 
   def my_entities
-    @my_entities = current_user.entities.where.not(group_id: nil)
+    if params[:group] == 'true'
+      @my_entities = current_user.entities.internal
+      @group = true
+    else
+      @my_entities = current_user.entities.external
+      @group = false
+    end
+    @my_entities = if params[:recent] == 'false'
+                     @my_entities.most_ancient
+                   else
+                     @my_entities.most_recent
+                   end
     @total_amount = @my_entities.sum(:amount)
-  end
-
-  def my_external_entities
-    @my_ext_entities = current_user.entities.where(group_id: nil)
-    @total_ext_amount = @my_ext_entities.sum(:amount)
   end
 
   private

@@ -1,4 +1,5 @@
-<h2>My transactions</h2>
+<%=  link_to 'Most recent', url_for( :recent => :true, :group => @group )%>
+<%=  link_to 'Most ancient', url_for( :recent => :false, :group => @group )%>
 
 <span> $<%= @total_amount%><span>
 <ul>
