@@ -4,4 +4,7 @@ class Entity < ApplicationRecord
 
   belongs_to :author, class_name: 'User'
   belongs_to :group, optional: true
+
+  scope :most_recent, -> { order(created_at: :desc) }
+  scope :most_ancient, -> { order(created_at: :asc) }
 end
