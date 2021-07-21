@@ -1,0 +1,21 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+$primary-color: #3778c2;
+$white-color: #fff;
+
+.user-btn {
+  color: $white-color;
+  background-color: $primary-color;
+}
+
+.page-header {
+  color: $white-color;
+  background-color: $primary-color;
+  text-align: center;
+}
+
+.center {
+  max-width: 90%;
+  margin: 0 auto;
+}
