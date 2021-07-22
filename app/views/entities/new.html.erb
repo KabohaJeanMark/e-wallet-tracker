@@ -1,30 +1,46 @@
-<h1>New Transaction</h1>
-
-<%= form_with model: @entity do |form| %>
-  <div>
-    <%= form.label :name %><br>
-    <%= form.text_field :name %>
-    <% @entity.errors.full_messages_for(:name).each do |message| %>
-      <div class="field-with-errors"><%= message %></div>
-    <% end %>
-  </div>
-
-  <div>
-    <%= form.label :amount %><br>
-    <%= form.number_field :amount %>
-    <% @entity.errors.full_messages_for(:amount).each do |message| %>
-      <div class="field-with-errors"><%= message %></div>
-    <% end %>
-  </div>
-
-  <%= form.label :group_id %>
-    <select name="entity[group_id]">
-      <option value = "<%= nil%>"> none </option>
-      <% Group.all.each do |g| %>
-        <option value = "<%= g.id %>"><%= g.name %></option>
+<section class="new-transaction">
+  <div class="page-headerr">
+  <div class="head-container">
+    <div class="profile-link">
+      <%= link_to current_user do %>
+        <%= fa_icon "bars 2x" %>
       <% end %>
-    </select>
-  <div>
-    <%= form.submit 'Create Transaction' %>
+    </div>
+    <div class="h2h">NEW TRANSACTION</div>
   </div>
-<% end %>
+  </div>
+
+  <div class="jumbotron center">
+
+    <%= form_with model: @entity do |form| %>
+      <div>
+        <%= form.label :name %><br>
+        <%= form.text_field :name %>
+        <% @entity.errors.full_messages_for(:name).each do |message| %>
+          <div class="field-with-errors"><%= message %></div>
+        <% end %>
+      </div>
+
+      <div>
+        <%= form.label :amount %><br>
+        <%= form.number_field :amount %>
+        <% @entity.errors.full_messages_for(:amount).each do |message| %>
+          <div class="field-with-errors"><%= message %></div>
+        <% end %>
+      </div>
+
+      <%= form.label :group_id %>
+        <select name="entity[group_id]">
+          <option value = "<%= nil%>"> none </option>
+          <% Group.all.each do |g| %>
+            <option value = "<%= g.id %>"><%= g.name %></option>
+          <% end %>
+        </select>
+      <div>
+        <%= form.submit 'Create Transaction', class: 'btn user-btn' %>
+      </div>
+    <% end %>
+
+  </div>
+
+</section>
