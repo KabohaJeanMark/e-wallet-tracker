@@ -26,6 +26,11 @@ img {
   text-align: center;
   padding: 2rem 0;
   margin: 0.3rem 0;
+
+  a {
+    display: inline-block;
+    color: $white-color;
+  }
 }
 
 .container-fluid {

@@ -12,9 +12,7 @@ $secondary-color: #5fb523;
   display: grid;
   grid-template-columns: 2fr 1.5fr 1.5fr;
   background-color: #fff;
-  margin-bottom: 1rem;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 1rem auto;
   width: 95%;
   padding: 2rem 0;
 
@@ -64,7 +62,8 @@ $secondary-color: #5fb523;
   display: grid;
   grid-template-columns: 2fr 2fr 1fr;
   background-color: #fff;
-  margin-bottom: 1rem;
+  margin: 1rem auto;
+  width: 96%;
   padding: 2rem 0;
 
   img {

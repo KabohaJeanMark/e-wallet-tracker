@@ -1,9 +1,24 @@
-<%=  link_to 'Most recent', url_for( :recent => :true, :group => @group )%>
-<%=  link_to 'Most ancient', url_for( :recent => :false, :group => @group )%>
+<section class="all_my_transactions">
 
-<span> $<%= @total_amount%><span>
-<ul>
+<div class="page-headerr">
+  <div class="profile-link">
+    <%= link_to 'Profile', current_user %>
+  </div>
+  <h2>MY TRANSACTIONS</h2>
+  <%=  link_to 'Most recent', url_for( :recent => :true, :group => @group )%>
+  <%=  link_to 'Most ancient', url_for( :recent => :false, :group => @group )%>
+</div>
+
+<div class="transaction-total">
+  <span class="amount-text">Total amount</span>
+  <span class="amount-total">$<%= @total_amount%></span>
+</div>
+
+<div class="group-box">
     <%= render @my_entities%>
-</ul>
+</div>
 
-<%= link_to "Create New Transaction", new_entity_path %>
+<div class="bottom-btn">
+  <%= link_to "Create New Transaction", new_entity_path %>
+</div>
+</section>
