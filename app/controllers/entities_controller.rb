@@ -22,10 +22,10 @@ class EntitiesController < ApplicationController
 
   def my_entities
     if params[:group] == 'true'
-      @my_entities = current_user.entities.internal
+      @my_entities = current_user.entities.internal.includes(:group)
       @group = true
     else
-      @my_entities = current_user.entities.external
+      @my_entities = current_user.entities.external.includes(:group)
       @group = false
     end
     @my_entities = if params[:recent] == 'false'
