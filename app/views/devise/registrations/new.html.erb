@@ -6,9 +6,10 @@
     `<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= render "devise/shared/error_messages", resource: resource %>
 
-      <span class="image">
+      <div class="field">
+        <%= f.label :profile_image %>
         <%= f.file_field :image %>
-      </span>
+      </div>
 
       <div class="field">
         <%= f.label :name %><br />

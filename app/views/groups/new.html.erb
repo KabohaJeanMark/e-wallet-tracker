@@ -10,12 +10,16 @@
       <%= form.label :name %><br>
       <%= form.text_field :name %>
       <% @group.errors.full_messages_for(:name).each do |message| %>
-        <div><%= message %></div>
+        <div class="field-with-errors"><%= message %></div>
       <% end %>
     </div>
 
     <div class="form-image">
+      <%= form.label :icon %><br>
       <%= form.file_field :icon %>
+      <% @group.errors.full_messages_for(:icon).each do |message| %>
+        <div class="field-with-errors"><%= message %></div>
+      <% end %>
     </div>
 
     <div>
