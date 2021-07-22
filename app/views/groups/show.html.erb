@@ -1,7 +1,14 @@
 <section class="group-show">
 <div class="page-headerr">
-  <h2>GROUP TRANSACTIONS</h2>
-</div>
+  <div class="head-container">
+    <div class="profile-link">
+      <%= link_to current_user do %>
+        <%= fa_icon "bars 2x" %>
+      <% end %>
+    </div>
+    <div class="h2h">GROUP TRANSACTIONS</div>
+  </div>
+  </div>
 <div class="group-box">
   <% @group.entities.each do |transaction| %>
     <div class="group-transaction-item">

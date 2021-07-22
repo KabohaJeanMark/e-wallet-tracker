@@ -1,6 +1,13 @@
 <section class="all-groups">
   <div class="page-headerr">
-    <h2>ALL GROUPS</h2>
+  <div class="head-container">
+    <div class="profile-link">
+      <%= link_to current_user do %>
+        <%= fa_icon "bars 2x" %>
+      <% end %>
+    </div>
+    <div class="h2h">ALL GROUPS</div>
+  </div>
   </div>
     <div class="group-box">
       <% @groups.each do |group| %>
