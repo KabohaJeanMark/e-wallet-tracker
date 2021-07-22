@@ -62,12 +62,33 @@ $secondary-color: #5fb523;
 
 .group-transaction-item {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 2fr 2fr 1fr;
   background-color: #fff;
   margin-bottom: 1rem;
   padding: 2rem 0;
 
   img {
     margin: 0.2rem 0;
+  }
+
+  .transaction-name {
+    font-size: 2rem;
+    padding: 0.2rem;
+    margin: 3rem 0;
+    color: grey;
+  }
+
+  .transaction-date {
+    font-size: 1.5rem;
+    padding: 0.2rem;
+    margin-top: 3rem;
+    color: grey;
+  }
+
+  .transaction-amount {
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding: 0.2rem;
+    margin: 3rem 0;
   }
 }

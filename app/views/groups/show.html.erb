@@ -7,10 +7,10 @@
     <div class="group-transaction-item">
       <%= image_tag transaction.group.icon if @group.icon.attached? %>
       <div>
-        <%= transaction.name %>
-        <%= transaction.created_at.to_date %>
+        <div class="transaction-name"><%= transaction.name %></div>
+        <div class="transaction-date"><%= transaction.created_at.to_date %></div>
       </div> 
-      <div>$<%= transaction.amount %></div>
+      <div class="transaction-amount">$<%= transaction.amount %></div>
     </div>
   <% end %>
   </div>
