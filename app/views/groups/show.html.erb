@@ -1,9 +1,17 @@
-<h2>Group Transactions</h2>
-<ul>
+<section class="group-show">
+<div class="page-headerr">
+  <h2>GROUP TRANSACTIONS</h2>
+</div>
+<div class="group-box">
   <% @group.entities.each do |transaction| %>
-    <li>
-      <%= transaction.name %>
-      <%= transaction.amount %>
-      <%= transaction.created_at.to_date %>
-    </li>
+    <div class="group-transaction-item">
+      <%= image_tag transaction.group.icon if @group.icon.attached? %>
+      <div>
+        <%= transaction.name %>
+        <%= transaction.created_at.to_date %>
+      </div> 
+      <div>$<%= transaction.amount %></div>
+    </div>
   <% end %>
+  </div>
+</section>

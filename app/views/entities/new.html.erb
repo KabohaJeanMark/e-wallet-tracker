@@ -17,9 +17,8 @@
     <% end %>
   </div>
 
-
   <%= form.label :group_id %>
-    <select>
+    <select name="entity[group_id]">
       <option value = "<%= nil%>"> none </option>
       <% Group.all.each do |g| %>
         <option value = "<%= g.id %>"><%= g.name %></option>

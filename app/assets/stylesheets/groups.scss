@@ -38,7 +38,7 @@ $secondary-color: #5fb523;
   width: 100%;
   background-color: $secondary-color;
   padding: 1rem 0;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   z-index: 3;
   display: flex;
@@ -58,4 +58,16 @@ $secondary-color: #5fb523;
 .form-image {
   margin: 1rem 0;
   padding: 1rem 0;
+}
+
+.group-transaction-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: #fff;
+  margin-bottom: 1rem;
+  padding: 2rem 0;
+
+  img {
+    margin: 0.2rem 0;
+  }
 }
