@@ -36,3 +36,10 @@ section {
     margin: 0;
   }
 }
+
+.field-with-errors {
+  padding: 2px;
+  background-color: red;
+  color: #fff;
+  display: table;
+}

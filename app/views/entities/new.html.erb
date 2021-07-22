@@ -5,7 +5,7 @@
     <%= form.label :name %><br>
     <%= form.text_field :name %>
     <% @entity.errors.full_messages_for(:name).each do |message| %>
-      <div><%= message %></div>
+      <div class="field-with-errors"><%= message %></div>
     <% end %>
   </div>
 
@@ -13,7 +13,7 @@
     <%= form.label :amount %><br>
     <%= form.number_field :amount %>
     <% @entity.errors.full_messages_for(:amount).each do |message| %>
-      <div><%= message %></div>
+      <div class="field-with-errors"><%= message %></div>
     <% end %>
   </div>
 
