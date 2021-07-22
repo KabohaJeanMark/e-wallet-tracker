@@ -10,7 +10,7 @@
   </div>
   </div>
 <div class="group-box">
-  <% @group.entities.each do |transaction| %>
+  <% @group_entities.each do |transaction| %>
     <div class="group-transaction-item">
       <%= image_tag transaction.group.icon if @group.icon.attached? %>
       <div>
