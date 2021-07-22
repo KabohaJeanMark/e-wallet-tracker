@@ -9,9 +9,9 @@ RSpec.describe Group, type: :model do
       expect(group1.valid?).to be false
     end
 
-    it 'is valid with valid params' do
+    it 'is not valid without image' do
       group2 = Group.new(name: 'Exercise', user_id: user1.id)
-      expect(group2.valid?).to be true
+      expect(group2.valid?).to be false
     end
 
     it 'requires the presence of the name attribute' do
