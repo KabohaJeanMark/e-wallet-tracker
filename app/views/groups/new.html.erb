@@ -13,7 +13,7 @@
   <div class="jumbotron center">
 
   <%= form_with model: @group do |form| %>
-    <div class="form-name">
+    <div class="form-group">
       <%= form.label :name %><br>
       <%= form.text_field :name %>
       <% @group.errors.full_messages_for(:name).each do |message| %>
@@ -21,7 +21,7 @@
       <% end %>
     </div>
 
-    <div class="form-image">
+    <div class="form-group">
       <%= form.label :icon %><br>
       <%= form.file_field :icon %>
       <% @group.errors.full_messages_for(:icon).each do |message| %>
