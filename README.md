@@ -8,6 +8,23 @@
 
 [Live Demo Link](https://sheltered-hamlet-43209.herokuapp.com/)
 
+## Screenshots
+
+### Authentication, Sign Up & Log In
+
+| ![screenshot](app/assets/images/signup.png) |![screenshot](app/assets/images/login.png) |
+|:---:|:---:|
+| Sign Up | Log In |
+
+### User Profile, All Groups, All My Transactions, & All My External Transactions
+
+| ![screenshot](app/assets/images/profile.png) |![screenshot](app/assets/images/all-groups.png) | ![screenshot](app/assets/images/my_transactions.png) |![screenshot](app/assets/images/my_ext_transactions.png) |
+|:---:|:---:|:---:|:---:|
+| User Profile | All Groups | All My Transactions | All My External transactions |
+
+### Create New Group, Create New Transaction
+
+
 ## Built With
 
 - Ruby v2.7.0
