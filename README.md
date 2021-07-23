@@ -24,6 +24,10 @@
 
 ### Create New Group, Create New Transaction
 
+| ![screenshot](app/assets/images/new-group.png) |![screenshot](app/assets/images/new-transaction.png) |
+|:---:|:---:|
+| Create New Group | Create New transaction |
+
 
 ## Built With
 
@@ -82,8 +86,6 @@ Authetication s handled by device:
 
 - One can sign up with a valid profile image, username, email address and a password of atleast 6 characters.
 - An already signed up user just needs their email and Password to log in.
-
-![screenshot](app/assets/images/sign_up.png)
 
 #### User Profile Page
 - After sign up or login, one is directed to their user profile page.
