@@ -6,7 +6,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://sheltered-hamlet-43209.herokuapp.com/)
+[Live Demo Link](https://limitless-plains-58858.herokuapp.com/)
 
 ## Screenshots
 
