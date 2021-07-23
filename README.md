@@ -144,7 +144,8 @@ Hat tip to Microverse for the README template, initial repo, instructions and tu
 
 ## Inspiration
 
-The design idea for the template followed is by the team at Behance. 
+The [design](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=) idea is by Gregoire Vella.
+
 
 ## 📝 License
 
