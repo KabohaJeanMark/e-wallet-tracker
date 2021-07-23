@@ -7,7 +7,7 @@ class GroupsController < ApplicationController
 
   def show
     @group = Group.find(params[:id])
-    @group_entities = @group.entities.includes(:group)
+    @group_entities = @group.entities.includes(:group, :author)
   end
 
   def new
