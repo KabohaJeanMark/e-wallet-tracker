@@ -15,6 +15,7 @@
       <%= image_tag transaction.group.icon if @group.icon.attached? %>
       <div>
         <div class="transaction-name"><%= transaction.name %></div>
+        <div class="transaction-author">Author: <%= transaction.author.name %></div>
         <div class="transaction-date"><%= transaction.created_at.to_date %></div>
       </div> 
       <div class="transaction-amount">$<%= transaction.amount %></div>

@@ -76,28 +76,26 @@ Authetication s handled by device:
 - All my transactions.(transactions created by logged-in user where the group was specified)
 - All my external transactions(transactions created by logged-in user but where no group was specified)
 
-![screenshot](app/assets/images/timeline.png)
+#### All My Transactions
+- Total amount is displayed at the top
+- A list of all transactions created by logged-in user is displayed (sorted by most recent).
+- 2 links to change the sort order. most recent and most ancient at the top.
+- Each transaction displays its name, amount and date, and an icon of the first group it has been assigned to.
+- An action button "Add new" is displayed.
 
-#### All Users, user profile and Add Friend button
-- One can see all users list.
-- One can see selected user page with their user name and all posts written by them (the most recent posts on the top).
-- One can send a friendship invitation.
+#### All My External transactions
+- A list of all transactions that are created by a logged-in user but **not assigned to any group** (sorted by most recent).
+- The design of the page is similar to the "All my transactions".
 
-![screenshot](app/assets/images/all_users.png)
+#### All Groups
+- A list of all groups is displayed in alphabetical order.
+- Each group displays its icon, name and creation date.
+- Each group is clickable and opens "Group transactions" page.
+- An action button "Create new" is displayed.
 
-#### Pending Friend Requests, Accept or Decline
-- One can click on My Friend Requests to view all your incoming friend requests and either accept or decline them. 
-- When you accept a friend request, it redirects to the Friends page that has a table showing all friends. 
-- One can see pending friendship invitations sent to me from other users.
-- One can accept or reject friendships invitation.
-
-
-![screenshot](app/assets/images/friend_requests.png)
-
-#### My Friends page to view all my accepted friends
-- Once can click on Friends on the navbar to view all your friends in a tabular format with their emails and links to their profiles.
-
-![screenshot](app/assets/images/my_friends.png)
+#### Group Transactions
+- A list of all transactions that belong to that group is displayed.
+- The design of the page is similar to the "All my transactions". Besides the information that appears in All my transactions page, each transaction displays the **name of the author** of the transaction.
 
 ## Author
 

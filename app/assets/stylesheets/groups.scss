@@ -74,8 +74,14 @@ $secondary-color: #5fb523;
   .transaction-name {
     font-size: 2rem;
     padding: 0.2rem;
-    margin: 3rem 0;
+    margin: 2rem 0;
     color: grey;
+  }
+
+  .transaction-author {
+    font-size: 1.8rem;
+    padding: 0.2rem;
+    margin: 1.5rem 0;
   }
 
   .transaction-date {
