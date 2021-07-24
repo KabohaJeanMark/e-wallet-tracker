@@ -32,4 +32,11 @@ feature 'Integration test walkthrough' do
     expect(page).to have_content('Dumb bells')
     expect(page).to have_content('$50')
   end
+
+  scenario 'visits user profile' do
+    visit current_path
+    expect(page).to have_content('All Groups')
+    expect(page).to have_content('My Transactions')
+    expect(page).to have_content('My External Transactions')
+  end
 end
