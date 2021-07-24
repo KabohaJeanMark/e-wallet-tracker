@@ -138,14 +138,9 @@ git checkout -b <ft-branch-name>
 
 Give a ⭐️ if you like this project!
 
-## Acknowledgments
+## Acknowledgments for design credit
 
-Hat tip to Microverse for the README template, initial repo, instructions and tutoring for this Capstone project.
-
-## Inspiration
-
-The [design](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=) idea is by Gregoire Vella.
-
+The [design](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=) idea is by Gregoire Vella and hosted on behance.
 
 ## 📝 License
 
