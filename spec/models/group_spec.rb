@@ -23,6 +23,11 @@ RSpec.describe Group, type: :model do
       group4 = Group.create(name: 'A', user_id: user1.id)
       expect(group4.errors.full_messages).to include('Name is too short (minimum is 2 characters)')
     end
+
+    it 'requires a valid length for the name of the group on creation' do
+      group5 = Group.create(name: 'A collection of books by the author of Sherlock Holmes', user_id: user1.id)
+      expect(group5.errors.full_messages).to include('Name is too long (maximum is 20 characters)')
+    end
   end
 
   context 'association test' do
