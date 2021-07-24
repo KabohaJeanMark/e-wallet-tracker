@@ -18,6 +18,11 @@ RSpec.describe Group, type: :model do
       group3 = Group.create(name: '', user_id: user1.id)
       expect(group3.errors.full_messages).to include("Name can't be blank")
     end
+
+    it 'needs a name to have atleast 2 characters' do
+      group4 = Group.create(name: 'A', user_id: user1.id)
+      expect(group4.errors.full_messages).to include('Name is too short (minimum is 2 characters)')
+    end
   end
 
   context 'association test' do
