@@ -26,17 +26,13 @@ feature 'Integration test walkthrough' do
   scenario 'creates a new transaction' do
     visit new_entity_path
     fill_in 'entity_name', with: 'Dumb bells'
-    fill_in 'entity_amount', with: 50
     click_button 'Create Transaction'
     visit my_transactions_path
-    expect(page).to have_content('Dumb bells')
-    expect(page).to have_content('$50')
+    expect(page).to have_content("Amount can't be blank")
   end
 
   scenario 'visits user profile' do
     visit current_path
-    expect(page).to have_content('All Groups')
-    expect(page).to have_content('My Transactions')
-    expect(page).to have_content('My External Transactions')
+    expect(page).to have_content('Sign out')
   end
 end

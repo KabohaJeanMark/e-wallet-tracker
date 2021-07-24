@@ -1,6 +1,6 @@
 class Entity < ApplicationRecord
-  validates :name, presence: true, length: { minimum: 2 }
-  validates :amount, presence: true, numericality: { only_integer: true, greater_than: 0 }
+  validates :name, presence: true, length: { minimum: 2, maximum: 20 }
+  validates :amount, presence: true, numericality: { only_integer: true, greater_than: 0, less_than: 1_000_000_000 }
 
   belongs_to :author, class_name: 'User'
   belongs_to :group, optional: true
