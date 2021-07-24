@@ -15,15 +15,15 @@
   <%= form_with model: @group do |form| %>
     <div class="form-group">
       <%= form.label :name %><br>
-      <%= form.text_field :name %>
+      <%= form.text_field :name, class: 'form-control' %>
       <% @group.errors.full_messages_for(:name).each do |message| %>
         <div class="field-with-errors"><%= message %></div>
       <% end %>
     </div>
 
-    <div class="form-group">
-      <%= form.label :icon %><br>
-      <%= form.file_field :icon %>
+    <div class="input-group">
+      <%= form.label :icon, class: 'input-group-text' %><br>
+      <%= form.file_field :icon, class: 'form-control-file' %>
       <% @group.errors.full_messages_for(:icon).each do |message| %>
         <div class="field-with-errors"><%= message %></div>
       <% end %>

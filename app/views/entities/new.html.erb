@@ -15,7 +15,7 @@
     <%= form_with model: @entity do |form| %>
       <div class="form-group">
         <%= form.label :name %><br>
-        <%= form.text_field :name %>
+        <%= form.text_field :name , class:'form-control' %>
         <% @entity.errors.full_messages_for(:name).each do |message| %>
           <div class="field-with-errors"><%= message %></div>
         <% end %>
@@ -23,7 +23,7 @@
 
       <div class="form-group">
         <%= form.label :amount %><br>
-        <%= form.number_field :amount %>
+        <%= form.number_field :amount, class:'form-control' %>
         <% @entity.errors.full_messages_for(:amount).each do |message| %>
           <div class="field-with-errors"><%= message %></div>
         <% end %>
