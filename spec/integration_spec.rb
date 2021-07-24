@@ -23,12 +23,12 @@ feature 'Integration test walkthrough' do
     expect(page).to have_content("Icon can't be blank")
   end
 
-  scenario 'creates a new transaction' do
+  scenario 'fails to create a new transaction without amount' do
     visit new_entity_path
     fill_in 'entity_name', with: 'Dumb bells'
     click_button 'Create Transaction'
     visit my_transactions_path
-    expect(page).to have_content("Amount can't be blank")
+    expect(page).not_to have_content('Dumb bells')
   end
 
   scenario 'visits user profile' do

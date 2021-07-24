@@ -29,5 +29,9 @@ RSpec.describe Entity, type: :model do
       entity6 = Entity.create(name: 'Apple pie', amount: -6, author_id: user1.id, group_id: group1.id)
       expect(entity6.errors.full_messages).to include('Amount must be greater than 0')
     end
+    it 'should not allow a very long string input transaction name on creation of new transaction' do
+      entity7 = Entity.create(name: 'The latest edition of it', amount: 30, author_id: user1.id, group_id: group1.id)
+      expect(entity7.errors.full_messages).to include('Name is too long (maximum is 20 characters)')
+    end
   end
 end
