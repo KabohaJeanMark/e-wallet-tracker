@@ -1,0 +1,78 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome";
+
+$primary-color: #3778c2;
+$white-color: #fff;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.page-headerr {
+  color: $white-color;
+  background-color: $primary-color;
+  text-align: center;
+  padding: 2rem 0;
+  margin: 0.3rem 0;
+
+  a {
+    display: inline-block;
+    color: $white-color;
+  }
+}
+
+.profile-link {
+  a {
+    color: $white-color;
+  }
+}
+
+.head-container {
+  display: flex;
+  justify-content: space-around;
+
+  .h2h {
+    margin-top: 0.5rem;
+    font-size: 2.2rem;
+    font-weight: bold;
+  }
+
+  .ancient-recent {
+    text-align: right;
+
+    a {
+      margin: 0.4rem;
+      padding: 0.3rem;
+    }
+  }
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+section {
+  h2 {
+    margin: 0;
+  }
+}
+
+.field-with-errors {
+  padding: 2px;
+  background-color: red;
+  color: #fff;
+  display: table;
+}

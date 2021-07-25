@@ -1,0 +1,38 @@
+<section class="new-group">
+  <div class="page-headerr">
+  <div class="head-container">
+    <div class="profile-link">
+      <%= link_to current_user do %>
+        <%= fa_icon "bars 2x" %>
+      <% end %>
+    </div>
+    <div class="h2h">NEW GROUP</div>
+  </div>
+  </div>
+
+  <div class="jumbotron center">
+
+  <%= form_with model: @group do |form| %>
+    <div class="form-group">
+      <%= form.label :name %><br>
+      <%= form.text_field :name, class: 'form-control' %>
+      <% @group.errors.full_messages_for(:name).each do |message| %>
+        <div class="field-with-errors"><%= message %></div>
+      <% end %>
+    </div>
+
+    <div class="input-group">
+      <%= form.label :icon, class: 'input-group-text' %><br>
+      <%= form.file_field :icon, class: 'form-control-file' %>
+      <% @group.errors.full_messages_for(:icon).each do |message| %>
+        <div class="field-with-errors"><%= message %></div>
+      <% end %>
+    </div>
+
+    <div>
+      <%= form.submit 'Create Group', class: 'btn user-btn' %>
+    </div>
+  <% end %>
+
+  </div>
+</section>

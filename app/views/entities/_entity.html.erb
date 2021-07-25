@@ -1,0 +1,10 @@
+<div class="group-transaction-item">
+  <% if !entity.group.nil? && entity.group.icon.attached? %>
+    <%= image_tag entity.group.icon%>
+  <% end%>
+  <div>
+    <div class="transaction-name"><%= entity.name %></div>
+    <div class="transaction-date"><%= entity.created_at.to_date %></div>
+  </div>
+  <div class="transaction-amount">$<%= entity.amount %></div>
+</div>

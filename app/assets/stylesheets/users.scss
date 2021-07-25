@@ -1,0 +1,52 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+$primary-color: #3778c2;
+$white-color: #fff;
+
+.user-btn {
+  color: $white-color;
+  background-color: $primary-color;
+  margin: 1rem 0;
+}
+
+.center {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.user-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $primary-color;
+  color: $white-color;
+  height: 100vh;
+
+  .profile-image {
+    margin: 3rem 0;
+
+    img {
+      border-radius: 50%;
+    }
+  }
+
+  nav {
+    ul {
+      list-style-type: none;
+
+      li {
+        border-bottom: 0.2rem solid $white-color;
+
+        a {
+          display: inline-block;
+          color: $white-color;
+          margin: 1rem 0;
+          padding: 1rem 0;
+          font-size: 2.2rem;
+        }
+      }
+    }
+  }
+}

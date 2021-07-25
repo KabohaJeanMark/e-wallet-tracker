@@ -1,0 +1,30 @@
+<section class="all_my_transactions">
+
+<div class="page-headerr">
+  <div class="head-container">
+    <div class="profile-link">
+      <%= link_to current_user do %>
+        <%= fa_icon "bars 2x" %>
+      <% end %>
+    </div>
+    <div class="h2h">MY TRANSACTIONS</div>
+  </div>
+  <div class="ancient-recent">
+  <%=  link_to 'Most recent', url_for( :recent => :true, :group => @group )%>
+  <%=  link_to 'Most ancient', url_for( :recent => :false, :group => @group )%>
+  </div>
+</div>
+
+<div class="transaction-total">
+  <span class="amount-text">Total amount</span>
+  <span class="amount-total">$<%= @total_amount%></span>
+</div>
+
+<div class="group-box">
+    <%= render @my_entities%>
+</div>
+
+<div class="bottom-btn">
+  <%= link_to "Create New Transaction", new_entity_path %>
+</div>
+</section>

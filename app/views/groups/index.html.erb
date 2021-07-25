@@ -1,0 +1,26 @@
+<section class="all-groups">
+  <div class="page-headerr">
+  <div class="head-container">
+    <div class="profile-link">
+      <%= link_to current_user do %>
+        <%= fa_icon "bars 2x" %>
+      <% end %>
+    </div>
+    <div class="h2h">ALL GROUPS</div>
+  </div>
+  </div>
+    <div class="group-box">
+      <% @groups.each do |group| %>
+        <div class="group-item">
+          <%= image_tag group.icon if group.icon.attached? %>
+          <%= link_to group.name, group %>
+          <p><%= group.created_at.to_date %></p>
+        </div>
+      <% end %>
+    </div>
+
+  <div class="bottom-btn">
+  <%= link_to "CREATE NEW GROUP", new_group_path %>
+  </div>
+</section>
+
