@@ -6,7 +6,10 @@
 
 ## Live Demo
 
-[Live Demo Link](https://limitless-plains-58858.herokuapp.com/)
+[Live Demo Link hosted on Heroku](https://limitless-plains-58858.herokuapp.com/)
+
+## Video Presentation
+[Video walkthrough project explanation](https://www.loom.com/share/9b33e948c1784999905dedf57af0e06e)
 
 ## Screenshots
 
